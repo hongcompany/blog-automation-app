@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import DramaList from 'routes/DramaList';
 import DramaPosting from 'routes/DramaPosting';
@@ -13,31 +13,37 @@ type RouterProps = {
 };
 
 export default function Router({ isAuth } : RouterProps) {
-    return (isAuth) ? (
-        <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route exact path="/drama">
-                <DramaList />
-            </Route>
-            <Route path="/drama/posting">
-                <DramaPosting />
-            </Route>
-            <Route>
-                <MyError />
-            </Route>
-        </Switch>
-    ) : (
-        <Switch>
-            <Route exact path="/">
-                <Login />
-            </Route>
-            <Route exact path="/signup">
-                <SignUp />
-            </Route>
-            <Redirect from="*" to="/" />
-        </Switch>
+    return (
+        <HashRouter>
+        {
+            (isAuth) ? (
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/drama">
+                    <DramaList />
+                </Route>
+                <Route path="/drama/posting">
+                    <DramaPosting />
+                </Route>
+                <Route>
+                    <MyError />
+                </Route>
+            </Switch>
+            ) : (
+            <Switch>
+                <Route exact path="/">
+                    <Login />
+                </Route>
+                <Route exact path="/signup">
+                    <SignUp />
+                </Route>
+                <Redirect from="*" to="/" />
+            </Switch>
+            )
+        }
+        </HashRouter>
     )
 }
 
