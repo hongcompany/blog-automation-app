@@ -8,7 +8,11 @@ import Login from 'routes/Login';
 import MyError from 'routes/MyError';
 import SignUp from 'routes/SignUp';
 
-export default function Router({ isAuth }) {
+type RouterProps = {
+    isAuth: boolean
+};
+
+export default function Router({ isAuth } : RouterProps) {
     return (
         <HashRouter>
             {
@@ -44,3 +48,7 @@ export default function Router({ isAuth }) {
         </HashRouter>
     )
 }
+
+Router.defaultProps = {
+    isAuth: false
+};
