@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import DramaList from 'routes/DramaList';
 import DramaPosting from 'routes/DramaPosting';
@@ -36,9 +36,7 @@ export default function Router({ isAuth } : RouterProps) {
             <Route exact path="/signup">
                 <SignUp />
             </Route>
-            <Route>
-                <MyError />
-            </Route>
+            <Redirect from="*" to="/" />
         </Switch>
     )
 }
