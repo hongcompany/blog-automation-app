@@ -22,13 +22,13 @@ export default function Router({ isAuth } : RouterProps) {
                 <Route exact path="/">
                     <Home />
                 </Route>
-                <Route exact path="/drama">
+                <Route exact path="/dramas">
                     <DramaList />
                 </Route>
-                <Route exact path="/drama/:dramaId">
+                <Route exact path="/dramas/:dramaId">
                     <DramaDetail />
                 </Route>
-                <Route path="/mypost/:postId">
+                <Route path="/myposts/:postId">
                     <MyPost />
                 </Route>
                 <Route>

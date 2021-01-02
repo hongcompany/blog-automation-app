@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from 'components/common/Header';
+import Footer from 'components/common/Footer';
 
 export default function MyPost() {
     return (
@@ -40,9 +41,7 @@ export default function MyPost() {
                     </div>
                 </section>
             </main>
-            <footer className="auth__page__footer">
-
-            </footer>
+            <Footer />
         </div>
     )
 }
