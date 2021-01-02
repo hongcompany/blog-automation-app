@@ -2,8 +2,21 @@ import React from 'react';
 
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
+import DramaCard from 'components/drama/DramaCard';
 
 export default function Home() {
+    const dramaList = [
+        {
+            id : 0,
+            imageUrl: `${process.env.PUBLIC_URL}/favicon.ico`,
+            title: "바람피면 죽는다",
+            broadCaster: "KBS",
+            broadCastDate: "2020",
+            rating: 3.2,
+            status: "포스팅 중"
+        },
+    ]
+
     return (
         <div className="auth__page">
             <Header />
@@ -12,19 +25,18 @@ export default function Home() {
                     <section className="home__page__drama__list__section">
                         <h3>포스팅 중인 드라마</h3>
                         <div className="home__page__drama__list">
-                            {/* for */}
-                            <article className="drama">
-                                <img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="드라마 이미지"/>
-                                <h5 className="drama__title">제목</h5>
-                                <div className="drama__info">
-                                    <span>방송사</span>| 
-                                    <span>요일</span>|
-                                    <span>시간</span>|
-                                    <span>시청률</span>|
-                                    <span>구독 수</span>
-                                </div>
-                                <span className="drama__posting__status">포스팅 중</span>
-                            </article>
+                            {
+                                (dramaList.length > 0) && (
+                                    dramaList.map(drama => <DramaCard key={drama.id} 
+                                        id={drama.id}
+                                        imageUrl={drama.imageUrl}
+                                        title={drama.title}
+                                        broadCaster={drama.broadCaster}
+                                        broadCastDate={drama.broadCastDate}
+                                        rating={drama.rating} 
+                                        status={drama.status} />)
+                                )
+                            }
                         </div>
                     </section>
                     <section className="home__page__drama__table__section">
