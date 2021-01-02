@@ -1,19 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import Header from 'components/common/Header';
 
 export default function DramaDetail() {
     return (
         <div className="auth__page">
-            <header className="auth__page__header">
-                <h1>Blog Automation</h1>
-                <nav className="auth__page__header__nav">
-                    <ul className="auth__page__header__nav__link__list">
-                        <li><Link to="/">홈</Link></li>
-                        <li><Link to="/drama">드라마</Link></li>
-                        <li><span>로그아웃</span></li>
-                    </ul>
-                </nav>
-            </header>
+            <Header />
             <main className="auth__page__main">
                 <section className="auth__page__main__section">
                     <section className="drama__detail__page">
