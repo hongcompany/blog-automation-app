@@ -38,9 +38,11 @@ export default function Home() {
                         <h3>포스팅 해야 될 글</h3>
                         <table className="home__page__drama__table">
                             <thead>
-                                <th className="posting__drama__title">드라마 제목</th>
-                                <th className="posting__drama__episode__no">에피소드</th>
-                                <th className="posting__drama__button">포스팅 하기</th>
+                                <tr>
+                                    <th className="posting__drama__title">드라마 제목</th>
+                                    <th className="posting__drama__episode__no">에피소드</th>
+                                    <th className="posting__drama__button">포스팅 하기</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>

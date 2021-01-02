@@ -2,11 +2,12 @@ import React from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import DramaList from 'routes/DramaList';
-import DramaPosting from 'routes/DramaPosting';
+import MyPost from 'routes/MyPost';
 import Home from 'routes/Home';
 import Login from 'routes/Login';
 import MyError from 'routes/MyError';
 import SignUp from 'routes/SignUp';
+import DramaDetail from 'routes/DramaDetail';
 
 type RouterProps = {
     isAuth: boolean
@@ -24,8 +25,11 @@ export default function Router({ isAuth } : RouterProps) {
                 <Route exact path="/drama">
                     <DramaList />
                 </Route>
-                <Route path="/drama/posting">
-                    <DramaPosting />
+                <Route exact path="/drama/:dramaId">
+                    <DramaDetail />
+                </Route>
+                <Route path="/mypost/:postId">
+                    <MyPost />
                 </Route>
                 <Route>
                     <MyError />
