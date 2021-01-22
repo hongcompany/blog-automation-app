@@ -1,42 +1,51 @@
-import React, {useState} from 'react'
+import { Grid, TextField, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
+import "./LoginForm.css";
+
 export default function LoginForm() {
-    const [id, setId] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-
-    const onSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (id === "") {
-            setError("아이디 값이 비어 있습니다.");
-            return;
-        }
-
-        if (password === "") {
-            setError("비밀번호 값이 비어 있습니다.");
-            return;
-        }
-
-        setId("");
-        setPassword("");
-    }
-
-    return (
-        <div className="login__form__wrapper">
-            <div className="login__form__header">
-                블로그 포스팅 자동화 솔루션
+    return (                  
+        <Grid container spacing={1} className="login-form-wrapper">
+            <div className="login-form">
+                <Grid container item xs={12} className="form-wrapper">
+                    <form noValidate>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="email"
+                            label="Email Address"
+                            name="email"
+                            autoComplete="email"
+                            autoFocus
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            name="password"
+                            label="Password"
+                            type="password"
+                            id="password"
+                            autoComplete="current-password"
+                        />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                        >
+                            Sign In
+                        </Button>
+                    </form>
+                </Grid>
+                <Grid container item xs={12} className="form-extra-info-wrapper">
+                    <Typography component="span">Blog Automation이 처음이신가요?</Typography>
+                    <Link to="/">회원가입</Link>
+                </Grid>
             </div>
-            <form className="login__form" onSubmit={onSubmit}>
-                <input type="text" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} />
-                <input type="password" placeholder="비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} />
-                {error}
-                <button type="submit">로그인</button>
-            </form>
-            <div className="login__form__footer">
-                Blog Automation이 처음이신가요? <Link to="/signup">회원가입</Link>
-            </div>
-        </div>
+        </Grid>
     )
 }

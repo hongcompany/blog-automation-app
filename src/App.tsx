@@ -2,10 +2,12 @@ import React from 'react';
 
 import Router from 'components/Router';
 
+import "App.css";
+
 function App() {
-    const isAuth = true;
+    const isAuth = false;
     return (
-        <div className="App">
+        <div id="App">
             <Router isAuth={isAuth}/>
         </div>
     );
