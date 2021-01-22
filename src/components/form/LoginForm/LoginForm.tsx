@@ -9,6 +9,7 @@ export default function LoginForm() {
             <div className="login-form">
                 <Grid container item xs={12} className="form-wrapper">
                     <form>
+                        <div className="blank-space"></div>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -19,26 +20,23 @@ export default function LoginForm() {
                             name="email"
                             autoComplete="email"
                             autoFocus
-                            className="form-input"
                         />
                         <TextField
                             variant="outlined"
                             margin="normal"
                             required
                             fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
                             id="password"
+                            label="Password"
+                            name="password"
+                            type="password"
                             autoComplete="current-password"
-                            className="form-input"
                         />
                         <Button
                             type="submit"
                             fullWidth
                             variant="contained"
                             color="primary"
-                            className="form-button"
                         >
                             Sign In
                         </Button>
