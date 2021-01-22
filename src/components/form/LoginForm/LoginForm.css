@@ -3,6 +3,7 @@
     height: 100%;
     align-items: center;
     justify-items: center;
+    padding: 10px;
 }
 
 .login-form {
@@ -11,9 +12,23 @@
 }
 
 .form-wrapper {
-    height: 80%;
+    height: 100%;
+    width: 100%;
+    
 }
 
-.form-extra-info-wrapper {
-    height: 20%;
+.form-wrapper form {
+    
+}
+
+.form-wrapper .form-input {
+    
+}
+
+.form-extra-info-wrapper span {
+    font-size: 15px;
+}
+
+.sign-up-link-wrapper {
+    text-align: right;
 }

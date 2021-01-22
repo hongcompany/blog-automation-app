@@ -15,7 +15,7 @@ export default function Login() {
                 <Grid container item xs={6} className="unauthorized-page-nested-wrapper">
                     <div className="unauthorized-page">
                         <Grid container item xs={12} className="unauthorized-page-header-wrapper">
-                            <header className="unauthorized-page-main-header">
+                            <header className="unauthorized-page-header">
                                 <Grid container item xs={12} className="unauthorized-page-header-title-wrapper">
                                     <div className="unauthorized-page-header-title">
                                         <Icon>build_circle</Icon>
