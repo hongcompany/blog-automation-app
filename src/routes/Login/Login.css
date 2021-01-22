@@ -23,7 +23,7 @@
 }
 
 .unauthorized-page-header {
-    padding: 10px;
+    padding: 20px;
 }
 
 .unauthorized-page-header-title {
@@ -79,5 +79,4 @@
     display: inherit;
     align-items: center;
     justify-content: center;
-    padding: 10px;
 }

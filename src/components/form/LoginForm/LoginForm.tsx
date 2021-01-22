@@ -44,12 +44,14 @@ export default function LoginForm() {
                         </Button>
                     </form>
                 </Grid>
-                <Grid container item spacing={1} className="form-extra-info-wrapper">
-                    <Grid item xs={8}>
+                <Grid container item spacing={1} xs={12} className="form-extra-info-wrapper">
+                    <Grid item xs={10}>
                         <Typography component="span">Blog Automation이 처음이신가요?</Typography>
                     </Grid>
-                    <Grid item xs={4} className="sign-up-link-wrapper">
-                        <Typography component="span"><Link to="/">회원가입</Link></Typography>
+                    <Grid item xs={2} className="sign-up-link-wrapper">
+                        <Typography component="span">
+                            <Link to="/">회원가입</Link>
+                        </Typography>
                     </Grid>
                 </Grid>
             </div>
