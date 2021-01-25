@@ -1,0 +1,35 @@
+.unauthorized-page-header-wrapper {
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.unauthorized-page-header {
+    padding: 20px;
+}
+
+.unauthorized-page-header-title {
+    display: inherit;
+}
+
+.unauthorized-page-header-title > span {
+    font-size: 35px;
+    padding: 8px;
+}
+
+.unauthorized-page-header-title > h1 {
+    font-size: 40px;
+}
+
+.unauthorized-page-header-subtitle-wrapper {
+    align-items: center;
+    justify-content: center;
+}
+
+.unauthorized-page-header-subtitle {
+    padding: 10px 0;
+}
+
+.unauthorized-page-header-subtitle > h2 {
+    font-size: 17px;
+}
