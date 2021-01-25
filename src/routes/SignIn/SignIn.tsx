@@ -3,7 +3,8 @@ import React from 'react';
 import Icon from '@material-ui/core/Icon';
 import { Grid, Typography } from '@material-ui/core';
 
-import LoginForm from 'components/form/LoginForm';
+import UnAuthorizeFooter from "components/common/UnAuthorizeFooter";
+import LoginForm from "components/form/LoginForm";
 import "routes/UnAuthorizePage.css";
 
 export default function SignIn() {
@@ -38,11 +39,7 @@ export default function SignIn() {
                                 <Grid item xs={2} />
                             </main>
                         </Grid>
-                        <Grid container item xs={12} className="unauthorized-page-footer-wrapper">
-                            <footer className="unauthorized-page-footer">
-                                <Typography component="span">@copyright HongCompany</Typography>        
-                            </footer>
-                        </Grid>
+                        <UnAuthorizeFooter />
                     </div>
                 </Grid>
                 <Grid item xs={3}/>

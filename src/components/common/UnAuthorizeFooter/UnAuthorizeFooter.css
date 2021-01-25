@@ -1,0 +1,11 @@
+.unauthorized-page-footer-wrapper {
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+}
+
+.unauthorized-page-footer {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+}
