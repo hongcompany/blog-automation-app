@@ -9,7 +9,6 @@ export default function LoginForm() {
             <div className="login-form">
                 <Grid container item xs={12} className="form-wrapper">
                     <form>
-                        <div className="blank-space"></div>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -48,7 +47,7 @@ export default function LoginForm() {
                     </Grid>
                     <Grid item xs={2} className="sign-up-link-wrapper">
                         <Typography component="span">
-                            <Link to="/">회원가입</Link>
+                            <Link to="/signup">회원가입</Link>
                         </Typography>
                     </Grid>
                 </Grid>

@@ -17,8 +17,8 @@
     width: 100%;
 }
 
-.blank-space {
-    height: 100px;
+.form-wrapper form {
+    margin: auto auto;
 }
 
 .form-extra-info-wrapper span {
