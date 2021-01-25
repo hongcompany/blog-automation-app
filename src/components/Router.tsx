@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import DramaList from 'routes/DramaList';
 import MyPost from 'routes/MyPost';
 import Home from 'routes/Home';
-import Login from 'routes/Login';
+import SignIn from 'routes/SignIn';
 import MyError from 'routes/MyError';
 import SignUp from 'routes/SignUp';
 import DramaDetail from 'routes/DramaDetail';
@@ -38,7 +38,7 @@ export default function Router({ isAuth } : RouterProps) {
             ) : (
             <Switch>
                 <Route exact path="/">
-                    <Login />
+                    <SignIn />
                 </Route>
                 <Route exact path="/signup">
                     <SignUp />

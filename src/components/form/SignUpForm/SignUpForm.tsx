@@ -1,62 +1,79 @@
-import React, {useState} from 'react'
-import { useHistory } from 'react-router-dom';
+import { Grid, TextField, Typography, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
+import "components/form/SignForm.css";
 
 export default function SignUpForm() {
-    const history = useHistory();
-
-    const [id, setId] = useState("");
-    const [password, setPassword] = useState("");
-    const [accessKey, setAccessKey] = useState("");
-    const [secretKey, setSecretKey] = useState("");
-    const [error, setError] = useState("");
-
-    const onSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        if (id === "") {
-            setError("아이디 값이 비어 있습니다.");
-            return;
-        }
-
-        if (password === "") {
-            setError("비밀번호 값이 비어 있습니다.");
-            return;
-        }
-
-        if (accessKey === "") {
-            setError("AccessKey 값이 비어 있습니다.");
-            return;
-        }
-
-        if (secretKey === "") {
-            setError("SecretKey 값이 비어 있습니다.");
-            return;
-        }
-
-        setId("");
-        setPassword("");
-        setAccessKey("");
-        setSecretKey("");
-        setError("");
-        history.push("/");
-    }
-
-    return (
-        <div className="sign__up__form__wrapper">
-            <div className="sign__up__form__header">
-                회원가입
+    return (                  
+        <Grid container spacing={1} className="form-wrapper">
+            <div className="sign-form">
+                <Grid container item xs={12} className="form-nested-wrapper">
+                    <form>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="email"
+                            label="Email Address"
+                            name="email"
+                            autoComplete="email"
+                            autoFocus
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="password"
+                            label="Password"
+                            name="password"
+                            type="password"
+                            autoComplete="current-password"
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="access-key"
+                            label="Access Key"
+                            name="access-key"
+                            type="password"
+                            autoComplete="current-password"
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="secret-key"
+                            label="Secret Key"
+                            name="secret-key"
+                            type="password"
+                            autoComplete="current-password"
+                        />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                        >
+                            Sign Up
+                        </Button>
+                    </form>
+                </Grid>
+                <Grid container item spacing={1} xs={12} className="form-extra-info-wrapper">
+                    <Grid item xs={10}>
+                        <Typography component="span">Blog Automation이 처음이신가요?</Typography>
+                    </Grid>
+                    <Grid item xs={2} className="sign-form-link-wrapper">
+                        <Typography component="span">
+                            <Link to="/login">로그인</Link>
+                        </Typography>
+                    </Grid>
+                </Grid>
             </div>
-            <form className="sign__up__form" onSubmit={onSubmit}>
-                <input type="text" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} />
-                <input type="password" placeholder="비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} />
-                <input type="password" placeholder="AccessKey" value={accessKey} onChange={(e) => setAccessKey(e.target.value)} />
-                <input type="password" placeholder="SecretKey" value={secretKey} onChange={(e) => setSecretKey(e.target.value)} />
-                {error}
-                <button type="submit">회원가입</button>
-            </form>
-            <div className="sign__up__form__footer">
-                
-            </div>
-        </div>
+        </Grid>
     )
 }

@@ -1,13 +1,13 @@
 import { Grid, TextField, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-import "./LoginForm.css";
+import "components/form/SignForm.css";
 
 export default function LoginForm() {
     return (                  
-        <Grid container spacing={1} className="login-form-wrapper">
-            <div className="login-form">
-                <Grid container item xs={12} className="form-wrapper">
+        <Grid container spacing={1} className="form-wrapper">
+            <div className="sign-form">
+                <Grid container item xs={12} className="form-nested-wrapper">
                     <form>
                         <TextField
                             variant="outlined"
@@ -45,7 +45,7 @@ export default function LoginForm() {
                     <Grid item xs={10}>
                         <Typography component="span">Blog Automation이 처음이신가요?</Typography>
                     </Grid>
-                    <Grid item xs={2} className="sign-up-link-wrapper">
+                    <Grid item xs={2} className="sign-form-link-wrapper">
                         <Typography component="span">
                             <Link to="/signup">회원가입</Link>
                         </Typography>

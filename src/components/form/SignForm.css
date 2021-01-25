@@ -1,4 +1,4 @@
-.login-form-wrapper {
+.form-wrapper {
     width: 100%;
     height: 100%;
     align-items: center;
@@ -6,18 +6,18 @@
     padding: 10px;
 }
 
-.login-form {
+.sign-form {
     width: 100%;
     height: 100%;
 }
 
 
-.form-wrapper {
+.form-nested-wrapper {
     height: 100%;
     width: 100%;
 }
 
-.form-wrapper form {
+.form-nested-wrapper form {
     margin: auto auto;
 }
 
@@ -25,11 +25,11 @@
     font-size: 15px;
 }
 
-.sign-up-link-wrapper {
+.sign-form-link-wrapper {
     text-align: right;
 }
 
-.sign-up-link-wrapper a {
+.sign-form-link-wrapper a {
     text-decoration: none;
     color: #0062ff;
 }

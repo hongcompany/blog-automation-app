@@ -4,9 +4,9 @@ import Icon from '@material-ui/core/Icon';
 import { Grid, Typography } from '@material-ui/core';
 
 import LoginForm from 'components/form/LoginForm';
-import "./Login.css";
+import "routes/UnAuthorizePage.css";
 
-export default function Login() {
+export default function SignIn() {
     return (
         <Grid container spacing={1} className="unauthorized-page-wrapper">
             <Grid container item xs={12}/>
