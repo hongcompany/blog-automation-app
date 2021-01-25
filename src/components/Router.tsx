@@ -4,10 +4,10 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import DramaList from 'routes/DramaList';
 import MyPost from 'routes/MyPost';
 import Home from 'routes/Home';
-import SignIn from 'routes/SignIn';
 import MyError from 'routes/MyError';
-import SignUp from 'routes/SignUp';
 import DramaDetail from 'routes/DramaDetail';
+import SignIn from 'routes/UnAuthorizePage/SignIn';
+import SignUp from 'routes/UnAuthorizePage/SignUp';
 
 type RouterProps = {
     isAuth: boolean

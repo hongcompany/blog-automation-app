@@ -4,10 +4,10 @@ import { Grid } from '@material-ui/core';
 
 import UnAuthorizeHeader from "components/common/UnAuthorizeHeader";
 import UnAuthorizeFooter from "components/common/UnAuthorizeFooter";
-import LoginForm from "components/form/LoginForm";
-import "routes/UnAuthorizePage.css";
+import SignUpForm from "components/form/SignUpForm";
+import "routes/UnAuthorizePage/UnAuthorizePage.css";
 
-export default function SignIn() {
+export default function SignUp() {
     return (
         <Grid container spacing={1} className="unauthorized-page-wrapper">
             <Grid container item xs={12}/>
@@ -20,7 +20,7 @@ export default function SignIn() {
                             <main className="unauthorized-page-main">
                                 <Grid item xs={2} />
                                 <Grid container item xs={8} className="main-form-wrapper">
-                                    <LoginForm />
+                                    <SignUpForm />
                                 </Grid>
                                 <Grid item xs={2} />
                             </main>
