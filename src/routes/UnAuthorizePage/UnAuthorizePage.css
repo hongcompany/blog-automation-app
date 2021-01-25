@@ -14,7 +14,7 @@
     height: 100%;
     margin: 0 auto;
     border: 1px solid lightgray;
-    box-shadow: 1px 1px 1px 1px darkgray;
+    box-shadow: 5px 5px 5px 1px darkgray;
 }
 
 .unauthorized-page-main-wrapper {
