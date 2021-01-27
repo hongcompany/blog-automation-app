@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '@material-ui/core/Icon';
-import { AppBar, Grid, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Chip, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
 
 import "./Home.css";
 
@@ -44,7 +44,38 @@ export default function Home() {
                 </Grid>
                 <Grid container item xs={12} className="authorized-page-main-wrapper">
                     <main className="authorized-page-main">
-
+                        <Grid container className="authorized-page-main-nested-wrapper">
+                            <Grid item xs={2} className="aside"></Grid>
+                            <Grid container item xs={8} className="main-container">
+                                <Paper elevation={3} className="main-paper">
+                                    <Grid container className="main-paper-section-wrapper">
+                                        <section className="main-paper-section">
+                                            <Grid container className="section-title">
+                                                <Chip label="포스팅 중인 드라마" 
+                                                    component="h2" 
+                                                    />
+                                            </Grid>
+                                            <Grid container className="section-content">
+                                                드라마 카드 리스트
+                                            </Grid>
+                                        </section>
+                                    </Grid>
+                                    <Grid container className="main-paper-section-wrapper">
+                                        <section className="main-paper-section">
+                                            <Grid container className="section-title">
+                                                <Chip label="포스팅 해야 될 글" 
+                                                    component="h2" 
+                                                    />
+                                            </Grid>
+                                            <Grid container className="section-content">
+                                                표
+                                            </Grid>
+                                        </section>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+                            <Grid item xs={2} className="aside"></Grid>
+                        </Grid>
                     </main>
                 </Grid>
                 <Grid container item xs={12} className="authorized-page-footer-wrapper">
