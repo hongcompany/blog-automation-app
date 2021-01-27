@@ -43,7 +43,7 @@ export default function Home() {
                     </header>
                 </Grid>
                 <Grid container item xs={12} className="authorized-page-main-wrapper">
-                    <main>
+                    <main className="authorized-page-main">
 
                     </main>
                 </Grid>
