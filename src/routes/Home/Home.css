@@ -1,17 +1,22 @@
 .authorized-page-wrapper {
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
 }
 
 .authorized-page {
     width: 100%;
+    height: 100%;
+    
 }
 
 .authorized-page-header-wrapper {
     width: 100%;
+    height: 65px;
 }
 
 .authorized-page-header {
     width: 100%;
+    height: 100%;
 }
 
 .tool-bar-title {
@@ -39,4 +44,24 @@
 
 .nav-item > button {
     margin-top: 5px;
+}
+
+
+.authorized-page-main-wrapper {
+    width: 100%;
+    height: 90%;
+}
+
+.authorized-page-footer-wrapper {
+    width: 100%;
+    height: 3%;
+}
+
+.authorized-page-footer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2px;
+    color: #d0d0f8;
+    border-top: 1px solid #d0d0f8;
 }

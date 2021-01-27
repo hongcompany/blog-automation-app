@@ -6,7 +6,7 @@ import "./Home.css";
 
 export default function Home() {    
     return (
-        <Grid container spacing={1} className="authorized-page-wrapper">
+        <Grid container className="authorized-page-wrapper">
             <div className="authorized-page">
                 <Grid container item xs={12} className="authorized-page-header-wrapper">
                     <header className="authorized-page-header">
@@ -42,14 +42,14 @@ export default function Home() {
                         </AppBar>
                     </header>
                 </Grid>
-                <Grid container item xs={12}>
+                <Grid container item xs={12} className="authorized-page-main-wrapper">
                     <main>
 
                     </main>
                 </Grid>
-                <Grid container item xs={12}>
-                    <footer>
-
+                <Grid container item xs={12} className="authorized-page-footer-wrapper">
+                    <footer className="authorized-page-footer">
+                        <Typography component="span">@Copyright Homgcompany</Typography>
                     </footer>
                 </Grid>
             </div>
