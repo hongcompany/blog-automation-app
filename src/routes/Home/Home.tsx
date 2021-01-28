@@ -1,10 +1,62 @@
 import React from 'react';
 import Icon from '@material-ui/core/Icon';
-import { AppBar, Chip, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Card, Chip, Grid, Paper, Toolbar, Typography, CardMedia, CardContent } from '@material-ui/core';
 
 import "./Home.css";
 
+const dramaList = [
+    {
+        id: 0,
+        imageUrl: "https://search.pstatic.net/common?type=o&size=150x214&quality=90&direct=true&src=https%3A%2F%2Fcsearch-phinf.pstatic.net%2F20210125_152%2F1611553331636y3oFQ_JPEG%2F57_14261794_poster_image_1611553331567.jpg",
+        title: "선배, 그 립스틱 바르지 마요",
+        broadcast: "JTBC",
+        days: ["월", "화"],
+        time: "오후 09:00",
+        rating: 2.1,
+        subscribe: 13285,
+    },
+];
+
 export default function Home() {    
+    const dramaCardList = dramaList.map(drama => 
+    <Card className="drama-card" elevation={5} key={drama.id}>
+        <div className="drama-card-img-wrapper">
+            <CardMedia component="img"
+                    image={drama.imageUrl}
+                    title={`${drama.title}-image`}
+                    className="drama-card-img"
+                    />
+        </div>
+        <div className="drama-card-content-wrapper">
+            <CardContent className="drama-card-content">
+                <div className="drama-card-content-nested-wrapper">
+                    <div className="drama-title">
+                        <Typography component="h5">
+                            {drama.title}
+                        </Typography>
+                    </div>
+                    <div className="drama-broadcast-info">
+                        <Typography component="span">
+                            {drama.broadcast} /
+                            {drama.days} /
+                            {drama.time}
+                        </Typography>
+                    </div>
+                    <div className="drama-rating-info">
+                        <Typography component="span">
+                            시청률 {drama.rating}%
+                        </Typography>
+                    </div>
+                    <div className="drama-subscribe-info">
+                        <Typography component="span">
+                            구독수 {drama.subscribe}
+                        </Typography>
+                    </div>
+                </div>
+            </CardContent>
+        </div>
+    </Card> 
+    );
     return (
         <Grid container className="authorized-page-wrapper">
             <div className="authorized-page">
@@ -56,7 +108,9 @@ export default function Home() {
                                                     />
                                             </Grid>
                                             <Grid container className="section-content">
-                                                드라마 카드 리스트
+                                                { 
+                                                    (dramaCardList) ? dramaCardList : <></> 
+                                                }
                                             </Grid>
                                         </section>
                                     </Grid>

@@ -91,6 +91,63 @@
     padding: 5px;
 }
 
+.drama-card {
+    height: 50%;
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.drama-card-img-wrapper {
+    grid-column: 1;
+    height: 88%;   
+}
+
+.drama-card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.drama-card-content-wrapper {
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.drama-card-content-nested-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3);
+    grid-gap: 5px;
+}
+
+.drama-card-content-nested-wrapper span{
+    font-size: 13px;
+}
+
+.drama-title {
+    grid-row: 1;
+}
+
+.drama-title h5 {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.drama-broadcast-info {
+    grid-row: 7;
+}
+
+.drama-rating-info {
+    grid-row: 8;
+}
+
+.drama-subscribe-info {
+    grid-row: 9 ;
+}
+
+
 .authorized-page-footer-wrapper {
     width: 100%;
     height: 54px;
